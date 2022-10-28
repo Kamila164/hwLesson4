@@ -40,4 +40,6 @@ let fruite = ("Apple", "Orange", "Lemon")
 var count = 0
 fruites(fruite.0, fruite.1, fruite.2)
 
-
+//Apple - 5 символов
+//Orange - 11 символов
+//Lemon - 16 символов

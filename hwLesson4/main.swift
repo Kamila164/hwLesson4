@@ -1,45 +1,52 @@
 import Foundation
+ 
+//ДЗ-1
+var stringTwo = ""
+var stringThree = ""
+var stringFour = ""
+var stringFive = ""
 
-
-//func a(_ str: String){
-//    for number in str{
-//        count += 1
-//    }
-//    print("\(str) - \(count) символов")
-//}
-//
-//let str = "Apple"
-//var count = 0
-//a(str)
-
-
-func fruites(_ fruite1: String, _ fruite2: String, _ fruite3: String){
-    func counting(_ f: String) -> Int{
-        if f == fruite1{
-            for _ in fruite1{
-                count += 1
-            }
-        } else if f == fruite2{
-            for _ in fruite2{
-                count += 1
-            }
-        }else if f == fruite3{
-            for _ in fruite3{
-                count += 1
-            }
+func getNumber() {
+    for number in 1...1000 {
+        if number % 2 == 0 {
+            stringTwo += "\(number),"
         }
-        return count
+        if number % 3 == 0 {
+            stringThree += "\(number),"
+        }
+        if number % 4 == 0 {
+            stringFour += "\(number),"
+        }
+        if number % 5 == 0 {
+            stringFive += "\(number),"
+        }
     }
-    let f1 = counting(fruite1)
-    let f2 = counting(fruite2)
-    let f3 = counting(fruite3)
-    print("\(fruite.0) - \(f1) символов \n\(fruite.1) - \(f2) символов \n\(fruite.2) - \(f3) символов")
+    print("кратное 2:", stringTwo)
+    print("кратное 3:", stringThree)
+    print("кратное 4:", stringFour)
+    print("кратное 5:", stringFive)
 }
 
-let fruite = ("Apple", "Orange", "Lemon")
-var count = 0
-fruites(fruite.0, fruite.1, fruite.2)
+getNumber()
 
-//Apple - 5 символов
-//Orange - 11 символов
-//Lemon - 16 символов
+
+//ДЗ-2
+func countFruits(_ fruits: String) {
+            for char in fruits{
+                    if char == "," {
+                        print("\(newString) - \(count) букв")
+                        count = 0
+                    } else {
+                        print(char)
+                        count += 1
+                    }
+            }
+    }
+
+var fruits = "абрикос,авокадо,яблоко,киви,лимон,манго,апельсин,персик,груша,слива,лайм,маракуйя,мандарин,манго,личи,инжир,гранат,грейпфрут,банан,айва,"
+
+var count = 0
+var newString = ""
+var str = ""
+
+countFruits(fruits)
